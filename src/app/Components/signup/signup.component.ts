@@ -15,8 +15,10 @@ import { HttpParams, HttpErrorResponse } from '@angular/common/http';
 export class SignupComponent {
   username:string="";
   password:string="";
+  submitted:boolean=false;
   constructor(private apiService:ApiService,private route:Router){}
   handleSignup(){
+    this.submitted=true;
     if(!this.username || !this.password){
       alert("please fill details!!");
     }

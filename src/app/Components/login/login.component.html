@@ -31,9 +31,8 @@
       />
     </div>
 
-    <div>
-      <re-captcha>
-        ons
+    <div *ngIf="showCaptcha">
+      <re-captcha (resolved)="onCaptchaResolved($event)" [siteKey]="siteKey">
       </re-captcha>
     </div>
     <div *ngIf="!password && submitted" class="text-red-500 text-sm mb-4">

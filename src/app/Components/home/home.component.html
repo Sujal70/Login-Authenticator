@@ -1,1 +1,21 @@
-<p>home works!</p>
+<div class="navbar">
+  <h3>Welcome to Home</h3>
+  <button class="but" (click)="openModal()">History</button>
+  <button class="but">Logout</button>
+</div>
+<div *ngIf="modal">
+  <table>
+    <tr>
+      <th>History Id</th>
+      <th>Ip Address</th>
+      <th>Username</th>
+      <th>LoginTime</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>192.168.1.1</td>
+        <td>JohnDoe</td>
+        <td>2024-10-23 10:00 AM</td>
+    </tr>
+  </table>
+</div>
